@@ -23,4 +23,9 @@ setuptools.setup(
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
     python_requires=">=3.6",
+    setup_requires=['pytest-runner', 'flake8','black'],
+    tests_require=['pytest'],
+    entry_points={
+        'console_scripts': ['my-command=tdd_proj.app:main']
+    },
 )
